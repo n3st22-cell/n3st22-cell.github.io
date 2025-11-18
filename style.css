@@ -1,0 +1,196 @@
+/* --- Reseteo básico --- */
+/* (Basado en tu index.css y buenas prácticas) */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Utilidades --- */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+/* --- Header y Navegación (Principio UX: Simple y Visible) --- */
+.main-header {
+  /* Usamos tu color */
+  background: #e60000;
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+  opacity: 0.8;
+}
+
+/* --- Hero Section (Principio UX: "Above the fold") --- */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh; /* (vh - Viewport Height) */
+  padding: 4rem 2rem;
+  background: #1a1a1a;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.hero-cta-button {
+  display: inline-block;
+  background: #e60000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-cta-button:hover {
+  transform: translateY(-3px);
+  background: #c00;
+}
+
+/* --- Secciones Generales --- */
+.projects-section,
+.about-section,
+.contact-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section, .contact-section {
+  text-align: center;
+  max-width: 800px;
+}
+.about-section p, .contact-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Grilla de Proyectos (kebab-case) --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  overflow: hidden; /* Para contener la imagen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: #eee;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  color: #e60000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- Footer --- */
+.main-footer {
+  text-align: center;
+  padding: 2rem;
+  background: #333;
+  color: #aaa;
+  font-size: 0.9rem;
+}
